@@ -384,6 +384,8 @@ bool FuncionDeTransicion::cambiarDeEstado(char cadena[],int posicion,int estado,
 		else{
 			char caracter = cadena[posicion-1];
 			switch(estado){
+				case 2:
+					return e.q2(cadena,caracter,posicion,estado,op,ptrCab);
 				case 3:
 					return true;
 				default:

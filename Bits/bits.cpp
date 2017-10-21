@@ -6,14 +6,14 @@ using namespace bits;
 
 void bits::poner1(uchar *byte, int pos){
     uchar aux = *byte;
-    if(aux^(1<<pos)){
+    if(!(aux&(1<<pos))){
         (*byte) ^= (1<<pos);
     }
 }
 
 void bits::poner0(uchar *byte, int pos){
     uchar aux = *byte;
-    if(aux^(0<<pos)){
+    if(!(aux&(0<<pos))){
         (*byte) ^= (1<<pos);
     }
 }

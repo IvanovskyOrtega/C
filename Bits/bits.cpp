@@ -4,6 +4,12 @@
 using namespace std;
 using namespace bits;
 
+void bits::inicializarBytes(uchar *bytes, int numBytes){
+    for(int i = 0; i < numBytes; i++){
+        bytes[i] = 0;
+    }
+}
+
 void bits::poner1(uchar *byte, int pos){
     if(!consultarBit((*byte),pos)){
         (*byte) ^= (1<<pos);
